@@ -11748,7 +11748,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -11756,6 +11756,7 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats</span> <span class="kn">import</span> <span class="n">proportion</span>
 
 <span class="c1">## Load the Titanic data and get a sense of what kind of information we have</span>
 <span class="n">titanic_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;titanic-data.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;PassengerId&#39;</span><span class="p">)</span>
@@ -11840,7 +11841,7 @@ PassengerId
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Look for missing values</span>
@@ -11893,7 +11894,7 @@ memory usage: 83.5+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Add a categorical age group column</span>
@@ -11953,7 +11954,7 @@ PassengerId
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Add a column with full names of embarkation sites</span>
@@ -12003,7 +12004,7 @@ PassengerId
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Get some descriptive statistics</span>
@@ -12038,11 +12039,11 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x116080590&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x119d2b4d0&gt;</pre>
 </div>
 
 </div>
@@ -12253,7 +12254,7 @@ GQQkSSqYQUCSpIIZBCRJKphBQJKkgv1/A9F8Y90MylkAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">class_survival</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Pclass&#39;</span><span class="p">)[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span>
@@ -12282,11 +12283,11 @@ Name: Survived, dtype: float64
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[55]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x118c94e10&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x11a53a4d0&gt;</pre>
 </div>
 
 </div>
@@ -12492,7 +12493,7 @@ vV7hFQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## independent t-test to compare survival means for male and female passengers</span>
@@ -12525,7 +12526,7 @@ vV7hFQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## independent t-test to compare survival means for classes</span>
@@ -12575,7 +12576,81 @@ second vs. third class t: 5.930638, p: 0.000000
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Proportion Chi-Squared test to compare survival rate for male and female passengers</span>
+
+<span class="n">prop_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(([</span><span class="n">female</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">male</span><span class="o">.</span><span class="n">sum</span><span class="p">()],</span> 
+                                      <span class="p">[</span><span class="n">female</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">male</span><span class="o">.</span><span class="n">count</span><span class="p">()]))</span>
+
+<span class="k">print</span> <span class="s2">&quot;X^2: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">prop_test</span>[:2]
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>X^2: 106.967888, p: 0.000000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Proportion Chi-Squared test to compare survival rate by class</span>
+
+<span class="n">prop_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(([</span><span class="n">first</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">second</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">third</span><span class="o">.</span><span class="n">sum</span><span class="p">()],</span> 
+                                    <span class="p">[</span><span class="n">first</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">second</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">third</span><span class="o">.</span><span class="n">count</span><span class="p">()]))</span>
+
+<span class="k">print</span> <span class="s2">&quot;X^2: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">prop_test</span>[:2]
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>X^2: 44.047700, p: 0.000000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Treating the survival rates as proportions and using a Chi-Squared test gives the same results.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">agegroup_survival</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;AgeGroup&#39;</span><span class="p">)[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span>
@@ -12633,11 +12708,11 @@ Name: Survived, dtype: float64
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x11999cc10&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x11a738690&gt;</pre>
 </div>
 
 </div>
@@ -12887,7 +12962,7 @@ AA4NSJJUMXsEJEmqmEFAkqSKGQQkSaqYQUCSpIoZBCRJqphBQJKkihkEJEmqmEFAkqSKGQQkSarY
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Independent t-test to compare survival means among age groups</span>
@@ -12907,6 +12982,18 @@ AA4NSJJUMXsEJEmqmEFAkqSKGQQkSaqYQUCSpIoZBCRJqphBQJKkihkEJEmqmEFAkqSKGQQkSarY
 <span class="c1">## Child vs. Senior</span>
 <span class="n">t_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">senior</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;child vs. senior t: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">t_test</span>
+
+<span class="c1">## Proportion Chi-Squared test to compare survival rate among age groups</span>
+
+<span class="n">prop_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(([</span><span class="n">child</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">adult</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">senior</span><span class="o">.</span><span class="n">sum</span><span class="p">()],</span> 
+                                    <span class="p">[</span><span class="n">child</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">adult</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">senior</span><span class="o">.</span><span class="n">count</span><span class="p">()]))</span>
+<span class="k">print</span> <span class="s2">&quot;X^2: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">prop_test</span>[:2]
+
+<span class="c1"># Child vs. Adult + Senior</span>
+
+<span class="n">prop_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(([</span><span class="n">child</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">adult</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">senior</span><span class="o">.</span><span class="n">sum</span><span class="p">()],</span> 
+                                    <span class="p">[</span><span class="n">child</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">adult</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">+</span> <span class="n">senior</span><span class="o">.</span><span class="n">count</span><span class="p">()]))</span>
+<span class="k">print</span> <span class="s2">&quot;child vs. adult + senior X^2: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">prop_test</span>[:2]
 </pre></div>
 
 </div>
@@ -12922,6 +13009,8 @@ AA4NSJJUMXsEJEmqmEFAkqSKGQQkSaqYQUCSpIoZBCRJqphBQJKkihkEJEmqmEFAkqSKGQQkSarY
 <pre>child vs. adult t: 3.052244, p: 0.002359
 adult vs. senior t: -1.199548, p: 0.230789
 child vs. senior t: 2.527641, p: 0.012619
+X^2: 4.585163, p: 0.101005
+child vs. adult + senior X^2: 3.549485, p: 0.059564
 </pre>
 </div>
 </div>
@@ -12935,14 +13024,14 @@ child vs. senior t: 2.527641, p: 0.012619
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Again using an alpha level of 0.05, children were significantly more likely to survive than either adults or seniors. However, there was no significant difference between for adult and senior survival rates.</p>
+<p>Again using an alpha level of 0.05 and a t-test, children were significantly more likely to survive than either adults or seniors. However, there was no significant difference between adult and senior survival rates. However, the chi-squared test does not show a significant difference.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Similarly, add a column for whether the passenger was traveling alone</span>
@@ -12993,7 +13082,7 @@ PassengerId
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">alone_survival</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Alone&#39;</span><span class="p">)[</span><span class="s1">&#39;Survived&#39;</span><span class="p">]</span>
@@ -13021,11 +13110,11 @@ Name: Survived, dtype: float64
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[63]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x119c77e50&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x11a8d8bd0&gt;</pre>
 </div>
 
 </div>
@@ -13267,7 +13356,7 @@ AUmSKmYQkCSpYgYBSZIqZhCQJKliBgFJkir2/wGOKBJWek6HFAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">## Independent t-test to compate survival means between passengers traveling alone and with family</span>
@@ -13277,6 +13366,12 @@ AUmSKmYQkCSpYgYBSZIqZhCQJKliBgFJkir2/wGOKBJWek6HFAAAAABJRU5ErkJggg==
 
 <span class="n">t_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">alone</span><span class="p">,</span> <span class="n">not_alone</span><span class="p">)</span>
 <span class="k">print</span> <span class="s2">&quot;t: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">t_test</span>
+
+<span class="c1">## Proportion Chi-Squared test to compare survival rate between passengers traveling alone and with family</span>
+
+<span class="n">prop_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(([</span><span class="n">alone</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">not_alone</span><span class="o">.</span><span class="n">sum</span><span class="p">()],</span> 
+                                    <span class="p">[</span><span class="n">alone</span><span class="o">.</span><span class="n">count</span><span class="p">(),</span> <span class="n">not_alone</span><span class="o">.</span><span class="n">count</span><span class="p">()]))</span>
+<span class="k">print</span> <span class="s2">&quot;X^2: </span><span class="si">%f</span><span class="s2">, p: </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">prop_test</span>[:2]
 </pre></div>
 
 </div>
@@ -13290,6 +13385,7 @@ AUmSKmYQkCSpYgYBSZIqZhCQJKliBgFJkir2/wGOKBJWek6HFAAAAABJRU5ErkJggg==
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>t: -6.193032, p: 0.000000
+X^2: 15.499619, p: 0.000083
 </pre>
 </div>
 </div>
@@ -13320,7 +13416,7 @@ AUmSKmYQkCSpYgYBSZIqZhCQJKliBgFJkir2/wGOKBJWek6HFAAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">class_fare</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Pclass&#39;</span><span class="p">)[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span>
@@ -13371,11 +13467,11 @@ Name: Fare, dtype: float64
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[65]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x1193d7d50&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x11aa6a850&gt;</pre>
 </div>
 
 </div>
@@ -13596,7 +13692,7 @@ ZUiQJElVhgRJklRlSJAkSVWGBEmSVGVIkCRJVYYESZJU9f8BeMZEccjgzMoAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">titanic_df</span><span class="p">[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">][</span><span class="s1">&#39;Fare&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">80</span><span class="p">))</span>
@@ -13611,11 +13707,11 @@ ZUiQJElVhgRJklRlSJAkSVWGBEmSVGVIkCRJVYYESZJU9f8BeMZEccjgzMoAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x1195db250&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x11abb1a10&gt;</pre>
 </div>
 
 </div>
@@ -13862,7 +13958,7 @@ GlsAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">titanic_df</span><span class="p">[</span><span class="s1">&#39;Pclass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span><span class="p">][</span><span class="s1">&#39;Fare&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">80</span><span class="p">))</span>
@@ -13877,11 +13973,11 @@ GlsAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[67]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x1196e32d0&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x11aeb4310&gt;</pre>
 </div>
 
 </div>
@@ -14130,7 +14226,7 @@ RkwaJElSIyYNkiSpEZMGSZLUyP8HFY2chGBZCfIAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">titanic_df</span><span class="p">[</span><span class="s1">&#39;Fare&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">]</span>
@@ -14164,23 +14260,23 @@ PassengerId
 816                 0       1                  Fry, Mr. Richard  male   NaN   
 823                 0       1   Reuchlin, Jonkheer. John George  male  38.0   
 
-             SibSp  Parch  Ticket  Fare Cabin Embarked         Port AgeGroup  \
+             SibSp  Parch  Ticket  Fare Cabin Embarked AgeGroup         Port  \
 PassengerId                                                                    
-180              0      0    LINE   0.0   NaN        S  Southampton    adult   
-264              0      0  112059   0.0   B94        S  Southampton    adult   
-272              0      0    LINE   0.0   NaN        S  Southampton    adult   
-278              0      0  239853   0.0   NaN        S  Southampton  unknown   
-303              0      0    LINE   0.0   NaN        S  Southampton    adult   
-414              0      0  239853   0.0   NaN        S  Southampton  unknown   
-467              0      0  239853   0.0   NaN        S  Southampton  unknown   
-482              0      0  239854   0.0   NaN        S  Southampton  unknown   
-598              0      0    LINE   0.0   NaN        S  Southampton    adult   
-634              0      0  112052   0.0   NaN        S  Southampton  unknown   
-675              0      0  239856   0.0   NaN        S  Southampton  unknown   
-733              0      0  239855   0.0   NaN        S  Southampton  unknown   
-807              0      0  112050   0.0   A36        S  Southampton    adult   
-816              0      0  112058   0.0  B102        S  Southampton  unknown   
-823              0      0   19972   0.0   NaN        S  Southampton    adult   
+180              0      0    LINE   0.0   NaN        S    adult  Southampton   
+264              0      0  112059   0.0   B94        S    adult  Southampton   
+272              0      0    LINE   0.0   NaN        S    adult  Southampton   
+278              0      0  239853   0.0   NaN        S  unknown  Southampton   
+303              0      0    LINE   0.0   NaN        S    adult  Southampton   
+414              0      0  239853   0.0   NaN        S  unknown  Southampton   
+467              0      0  239853   0.0   NaN        S  unknown  Southampton   
+482              0      0  239854   0.0   NaN        S  unknown  Southampton   
+598              0      0    LINE   0.0   NaN        S    adult  Southampton   
+634              0      0  112052   0.0   NaN        S  unknown  Southampton   
+675              0      0  239856   0.0   NaN        S  unknown  Southampton   
+733              0      0  239855   0.0   NaN        S  unknown  Southampton   
+807              0      0  112050   0.0   A36        S    adult  Southampton   
+816              0      0  112058   0.0  B102        S  unknown  Southampton   
+823              0      0   19972   0.0   NaN        S    adult  Southampton   
 
             Alone  
 PassengerId        
@@ -14220,7 +14316,7 @@ PassengerId
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># print titanic_df.groupby(&#39;Port&#39;)[&#39;Fare&#39;, &#39;Pclass&#39;].describe()</span>
